@@ -1,0 +1,40 @@
+{
+  "name": "Adafruit-GFX-dummy-display",
+  "version": "1.0.0",
+  "description": "Adafruit-GFX-dummy-display aims to provide a virtual display to develop graphics using Adafruit-GFX-Library without hardware",
+  "keywords": "Adafruit_GFX, display, UI",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/snaens/Adafruit_GFX_dummy_display.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Vincent Hervieux",
+      "email": "vincent.hervieux@free.fr"
+    },
+    {
+      "name": "Sam 'snaens' Pelz",
+      "email": "snaens@snaens.net",
+      "url": "https://snaens.net",
+      "maintainer": true
+    }
+  ],
+  "license": "BSD",
+  "homepage": "https://github.com/snaens/Adafruit_GFX_dummy_display",
+  "dependencies": {},
+  "frameworks": "",
+  "platforms": "native",
+  "build": {
+    "flags": [
+      "-D Arduino=123",
+      "-I Adafruit-GFX-Library",
+      "!sdl2-config --cflags"
+    ],
+    "srcFilter": [
+      "-<Adafruit-GFX-Library/**/*TFT.cpp>",
+      "-<example.cpp>"
+    ]
+  }
+}
